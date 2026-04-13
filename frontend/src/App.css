@@ -1,0 +1,388 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0b1020, #121a31);
+  color: white;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, #6366f1, #34d399);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.menu-item {
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #d1d5db;
+  transition: 0.25s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: rgba(99,102,241,0.18);
+  color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 28px;
+}
+
+.topbar h1 {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+}
+
+.alerts {
+  margin-bottom: 18px;
+}
+
+.alert-box {
+  background: rgba(239,68,68,0.14);
+  border-left: 4px solid #ef4444;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.card,
+.logs-page,
+.health-score,
+.insights,
+.weekly-analytics {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.card {
+  text-align: center;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.logs-page,
+.health-score,
+.insights,
+.weekly-analytics {
+  margin-top: 20px;
+}
+
+.logs-page input,
+.logs-page select,
+button,
+input,
+select {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+input,
+select {
+  background: rgba(255,255,255,0.92);
+  color: #111827;
+}
+
+button {
+  background: linear-gradient(135deg, #6366f1, #7c83fd);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 18px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #34d399, #6366f1);
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 0 28px rgba(99,102,241,0.35);
+}
+
+.insights ul {
+  padding-left: 20px;
+}
+
+.insights li {
+  margin-bottom: 10px;
+}
+
+.weekly-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.mini-stat {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.mini-stat h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+.mini-stat p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sleep{border-top:4px solid #818cf8;}
+.water{border-top:4px solid #38bdf8;}
+.exercise{border-top:4px solid #34d399;}
+.screen{border-top:4px solid #fb923c;}
+.stress{border-top:4px solid #f472b6;}
+.chart-container{
+background:#1e1e2f;
+padding:25px;
+margin-top:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.chart-container h2{
+margin-bottom:20px;
+color:white;
+}
+.health-score{
+margin-top:40px;
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:20px;
+text-align:center;
+backdrop-filter: blur(10px);
+}
+
+.score-circle{
+width:120px;
+height:120px;
+border-radius:50%;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+font-weight:bold;
+margin:20px auto;
+color:white;
+}
+
+.rings-container{
+display:flex;
+gap:40px;
+margin-top:30px;
+margin-bottom:30px;
+}
+
+.ring-card{
+text-align:center;
+color:white;
+}
+
+.ring{
+width:120px;
+height:120px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+font-weight:bold;
+margin:auto;
+position:relative;
+}
+
+.sleep-ring{
+background:conic-gradient(#7c83fd 0% 75%, #1f2937 75% 100%);
+}
+
+.water-ring{
+background:conic-gradient(#38bdf8 0% 80%, #1f2937 80% 100%);
+}
+
+.exercise-ring{
+background:conic-gradient(#34d399 0% 60%, #1f2937 60% 100%);
+}
+
+.ring span{
+background:#0a0f1e;
+width:80px;
+height:80px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+
+.card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metrics, .chart-container, .insights, .health-score {
+  animation: fadeInUp 0.6s ease;
+}
+
+.score-circle {
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 20px rgba(99,102,241,0.4);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(99,102,241,0.8);
+  }
+}
+
+.menu-item {
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.alerts {
+  margin: 15px;
+}
+
+.alert-box {
+  background: rgba(239,68,68,0.15);
+  border-left: 4px solid #ef4444;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.card, .logs-page, .health-score, .insights {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+.logs-table {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.logs-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.logs-table th,
+.logs-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logs-table th {
+  background: rgba(255,255,255,0.08);
+  color: #e5e7eb;
+}
+
+.logs-table td {
+  color: #d1d5db;
+}
+
+}
