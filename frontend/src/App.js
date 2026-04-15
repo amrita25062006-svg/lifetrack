@@ -91,10 +91,10 @@ const addLog = () => {
     });
 };
   useEffect(() => {
-  axios.get("http://127.0.0.1:8000/api/users/")
+  axios.get("https://lifetrack-s3i2.onrender.com/api/users/")
     .then(res => setUsers(res.data));
 
-  axios.get("http://127.0.0.1:8000/api/logs/")
+  axios.get("https://lifetrack-s3i2.onrender.com/api/logs/")
     .then(res => setLogs(res.data));
 }, []);
    const filteredLogs = selectedUser
